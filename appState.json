@@ -1,0 +1,98 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "6dac57ac-c27b-4c14-a6ae-19a908efe596": {
+        "id": "6dac57ac-c27b-4c14-a6ae-19a908efe596",
+        "parent": null,
+        "name": "Hiru_test",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "7ebd2eb0-7050-425b-9a53-8e4814fdca81"
+        ],
+        "isRemovable": false,
+        "filePath": "Hiru_test"
+      },
+      "7ebd2eb0-7050-425b-9a53-8e4814fdca81": {
+        "id": "7ebd2eb0-7050-425b-9a53-8e4814fdca81",
+        "parent": "6dac57ac-c27b-4c14-a6ae-19a908efe596",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "Hiru_test/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    console.log(\"Hello Hello\")\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "s3hiruworkshop",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ]
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "6dac57ac-c27b-4c14-a6ae-19a908efe596",
+    "openFiles": [
+      "7ebd2eb0-7050-425b-9a53-8e4814fdca81"
+    ],
+    "currentFileId": "7ebd2eb0-7050-425b-9a53-8e4814fdca81",
+    "resources": {
+      "s3hiruworkshop": {
+        "name": "s3hiruworkshop",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "hiruworkshop"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "Hiru_test",
+    "projectDescription": "This is a test",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1573040342150
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "Hiru_test",
+      "url": "https://github.com/HirudineeADRT/Hiru_test-sigma-1573040367346"
+    }
+  }
+}
